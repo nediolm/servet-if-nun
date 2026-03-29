@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk Edebiyatı Tarihi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Şifre Ekranı -->
+    <div id="login-screen" class="overlay">
+        <div class="login-box">
+            <h1>Edebiyat Dünyasına Giriş</h1>
+            <p>Lütfen devam etmek için şifreyi giriniz.</p>
+            <input type="password" id="password-input" placeholder="Şifre (edebiyat)">
+            <button onclick="checkPassword()">Giriş Yap</button>
+            <p id="error-msg" class="error"></p>
+        </div>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div id="main-content" class="hidden">
+        <header>
+            <h1>Türk Edebiyatı Dönemleri</h1>
+            <p>Edebiyatımızın köklü geçmişine bir yolculuk.</p>
+        </header>
+
+        <main class="grid-container">
+            <div class="card" onclick="openModal('islamiyet-oncesi')">
+                <h3>İslamiyet Öncesi</h3>
+                <p>Sözlü ve Yazılı Dönem</p>
+            </div>
+            <div class="card" onclick="openModal('halk-edebiyati')">
+                <h3>Halk Edebiyatı</h3>
+                <p>Halkın Sesi ve Hece Ölçüsü</p>
+            </div>
+            <div class="card" onclick="openModal('divan-edebiyati')">
+                <h3>Divan Edebiyatı</h3>
+                <p>Saray Çevresi ve Aruz</p>
+            </div>
+            <div class="card" onclick="openModal('tanzimat')">
+                <h3>Tanzimat Dönemi</h3>
+                <p>Batılılaşma ve Yenilikler</p>
+            </div>
+            
+            <!-- Özel Bölüm: Servet-i Fünun -->
+            <div class="card special" onclick="openModal('serveti-funun')">
+                <div class="special-badge">Özel Bölüm</div>
+                <h3>Servet-i Fünun</h3>
+                <p>Edebiyat-ı Cedide</p>
+            </div>
+
+            <div class="card" onclick="openModal('milli-edebiyat')">
+                <h3>Milli Edebiyat</h3>
+                <p>Dilde Sadeleşme ve Türkçülük</p>
+            </div>
+            <div class="card" onclick="openModal('cumhuriyet')">
+                <h3>Cumhuriyet Dönemi</h3>
+                <p>Modern Türk Edebiyatı</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal (Pencere) Yapısı -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- İçerik JS ile buraya gelecek -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
