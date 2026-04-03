@@ -4,7 +4,7 @@ function checkPassword() {
     const errorMsg = document.getElementById('error-msg');
     
     // Belirlediğiniz şifre: Servet-i Fünun
-    if (password === 'Servet-i Fünun,servetifünun,serveti fünun,Serveti Fünun') {
+    if (password === 'Servet-i Fünun') {
         document.getElementById('login-screen').classList.add('hidden');
         document.getElementById('main-content').classList.remove('hidden');
     } else {
